@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <style>
         .grid-container {
             display: grid;
@@ -59,16 +62,108 @@
 </head>
 
 <body>
-
     <div class="container">
         <h2>GradNet</h2>
+        <select id="custom-select">
+        <option value="level">Select level:</option>
+        <option value="level">Level</option>
+        <option value="Level 7">Level 7</option>
+        <option value="Undergraduate in progress">Undergraduate Level 8 in progress</option>
+        <option value="Undergraduate complete">UndergraduateLevel 8 complete</option>
+        <option value="Higher Diploma">Higher Diploma</option>
+        <option value="Masters">Masters</option>
+        <option value="PhD">PhD</option>
+    </select>
+        <select id="custom-select">
+        <option value="degree">Select Degree:</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Anthropology">Anthropology</option>
+        <option value="Aeronautical/Aerospace">Aeronautical/Aerospace</option>
+        <option value="Agriculture">Agricultural Science</option>
+        <option value="Architectural Science">Architecture</option>
+        <option value="Biology">Biology</option>
+        <option value="Biotechnology">Biotechnology</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Communications">Communications</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Construction">Construction</option>
+        <option value="Customer Service Management">Customer Service Management</option>
+        <option value="Education">Education</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Environmental Studies">Environmental Studies</option>
+        <option value="English">English</option>
+        <option value="Finance">Finance</option>
+        <option value="French">French</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Hospitality">Hospitality</option>
+        <option value="Human Resoure Management">Human Resoure Management</option>
+        <option value="German">German</option>
+        <option value="IT">IT</option>
+        <option value="Legal">Legal</option>
+        <option value="Linguistics">Linguistics</option>
+        <option value="Manufacturing Engineering ">Manufacture Engineering</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Operations/Logistics">Operations/Logistics</option>
+        <option value="Physics">Physics</option>
+        <option value="Physics and Mathemathics">Physics and Mathemathics</option>
+        <option value="Project Management">Project Management </option>
+        <option value="Science">Science</option>
+        <option value="Sociology">Sociology</option>
+        <option value="Social Work">Social Work</option>
+        <option value="Sports Science">Sports Science</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Web Development">Web Development</option>
+    </select>
+        <select id="custom-select">
+        <option value="postgraduate">Select Postgraduate:</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Anthropology">Anthropology</option>
+        <option value="Aeronautical/Aerospace">Aeronautical/Aerospace</option>
+        <option value="Agriculture">Agricultural Science</option>
+        <option value="Architectural Science">Architecture</option>
+        <option value="Biology">Biology</option>
+        <option value="Biotechnology">Biotechnology</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Communications">Communications</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Construction">Construction</option>
+        <option value="Customer Service Management">Customer Service Management</option>
+        <option value="Education">Education</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Environmental Studies">Environmental Studies</option>
+        <option value="English">English</option>
+        <option value="Finance">Finance</option>
+        <option value="French">French</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Hospitality">Hospitality</option>
+        <option value="Human Resoure Management">Human Resoure Management</option>
+        <option value="German">German</option>
+        <option value="IT">IT</option>
+        <option value="Legal">Legal</option>
+        <option value="Linguistics">Linguistics</option>
+        <option value="Manufacturing Engineering ">Manufacture Engineering</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Operations/Logistics">Operations/Logistics</option>
+        <option value="Physics">Physics</option>
+        <option value="Physics and Mathemathics">Physics and Mathemathics</option>
+        <option value="Project Management">Project Management </option>
+        <option value="Science">Science</option>
+        <option value="Sociology">Sociology</option>
+        <option value="Social Work">Social Work</option>
+        <option value="Sports Science">Sports Science</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Web Development">Web Development</option>
+    </select>
         <ul class="nav nav-tabs">
             <li class="active"><a href="#home">Home</a></li>
             <li><a href="#menu1">Overview</a></li>
             <li><a href="#menu2">Jobs</a></li>
             <li><a href="#menu3">Candidates</a></li>
         </ul>
-
         <div class="tab-content" contenteditable="true">
             <div id="home" class="tab-pane fade in active">
                 <div class="grid-container1">
@@ -88,7 +183,6 @@
                     </div>
                 </div>
             </div>
-
             <div id="menu1" class="tab-pane fade">
                 <h3>You Got Mail!</h3>
                 <table id="bodytable" class="table" width="500" style="border:1px solid #333" cellpadding="20" cellspacing="0" height="100%" width="100%">
@@ -134,15 +228,111 @@
                 </table>
             </div>
             <div id="menu2" class="tab-pane fade">
-                <h1>Activity</h1>
+                <h1>Post a Job</h1>
+                <div class="grid-container">
+                    <form action="/action_page.php">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="cname">Company Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="cname" name="cname" placeholder="Company Name..">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="jtitle">Job Title</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="jtitle" name="jobtitle" placeholder="Job Title..">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="subject">Job Description</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="city">City or County</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="city" name="city">
+                                <option value="dublin">Dublin</option>
+                                <option value="kildare">Kildare</option>
+                                <option value="meath">Meath</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="jtype">Job Type (optional)</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="jtype" name="jtype" placeholder="...">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="salary">Salary (optional) €</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="salary" name="salary" placeholder="24k a year...">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="exp">Experience</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="exp" name="exp" placeholder="Example:Accounting">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="licence">Licence (optional)</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="licence" name="licence" placeholder="Example: Driver Licence">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="elevel">Education level (optional)</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="elevel">
+                                <option value="level">Level</option>
+                                <option value="Level 7">Level 7</option>
+                                <option value="Undergraduate in progress">Undergraduate Level 8 in progress</option>
+                                <option value="Undergraduate complete">UndergraduateLevel 8 complete</option>
+                                <option value="Higher Diploma">Higher Diploma</option>
+                                <option value="Masters">Masters</option>
+                                <option value="PhD">PhD</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="language">Additional language required (optional)</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="language" name="language" placeholder="Example: German">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button onClick="post();">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
             <div id="menu3" class="tab-pane fade">
                 <h1>Interviews</h1>
             </div>
-
         </div>
-
         <script>
             $(document).ready(function() {
                 $(".nav-tabs a").click(function() {
@@ -159,16 +349,54 @@
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
-
                     reader.onload = function(e) {
                         $('#blah')
                             .attr('src', e.target.result)
                             .width(250)
                             .height(auto);
                     };
-
                     reader.readAsDataURL(input.files[0]);
                 }
+            }
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-functions.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyD4J4mmvmV5L34gmX9BL09ZMRHKD25D13w",
+                authDomain: "project2-84c6e.firebaseapp.com",
+                databaseURL: "https://project2-84c6e.firebaseio.com",
+                projectId: "project2-84c6e",
+                storageBucket: "project2-84c6e.appspot.com",
+                messagingSenderId: "697844001483"
+            };
+            firebase.initializeApp(config);
+            var database = firebase.database();
+        </script>
+        <script>
+            //gets data from firebase as object
+            function post(dataType, dataID) {
+                var data = {};
+                var postRef = database.ref("/" + dataType + "/" + dataID);
+                dataRef.on('value', function(snapshot) {
+                    snapshot.forEach(function(childSnapshot) {
+                        data[childSnapshot.key] = childSnapshot.val();
+                    });
+                });
+                return data;
+            }
+
+            function post() {
+                var myObj = getData("Employer", "johnsmith(gmail,com");
+                window.setTimeout(retrieveData, 1);
+                document.getElementById("menu2").innerHTML = myObj.city;
             }
         </script>
 </body>
